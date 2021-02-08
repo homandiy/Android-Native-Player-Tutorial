@@ -1,0 +1,12 @@
+include ':android-tutorial-1'
+include ':android-tutorial-2'
+include ':android-tutorial-3'
+include ':android-tutorial-4'
+include ':android-tutorial-5'
+
+
+//def gstreamersdk='D:\\Android\\gstreamer\\1.18.3'
+//include ':gstreamer'
+//project(':gstreamer').projectDir = new File(gstreamersdk)
+include ':common'
+

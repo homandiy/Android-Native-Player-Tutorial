@@ -1,0 +1,7 @@
+D:/Android/tool/gst-docs-master/examples/tutorials/android/android-tutorial-3/jni/tutorial-3.c:353:12: warning: more '%' conversions than data arguments [-Wformat]
+    LOGE("%s" "tutorial-3: The calling class does not implement "
+          ~^
+D:/Android/tool/gst-docs-master/examples/tutorials/android/android-tutorial-3/jni/tutorial-3.c:13:64: note: expanded from macro 'LOGE'
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG,  __VA_ARGS__)
+                                                               ^~~~~~~~~~~
+1 warning generated.

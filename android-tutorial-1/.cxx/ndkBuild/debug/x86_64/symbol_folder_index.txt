@@ -1,0 +1,1 @@
+D:\Android\tool\gst-docs-master\examples\tutorials\android\android-tutorial-1\build\intermediates\ndkBuild\debug\obj\local\x86_64

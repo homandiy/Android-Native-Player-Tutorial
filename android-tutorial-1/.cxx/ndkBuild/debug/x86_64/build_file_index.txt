@@ -1,0 +1,2 @@
+D:\Android\tool\gst-docs-master\examples\tutorials\android\android-tutorial-1\jni\Android.mk
+D:\Android\tool\gst-docs-master\examples\tutorials\android\android-tutorial-1\jni\Application.mk
