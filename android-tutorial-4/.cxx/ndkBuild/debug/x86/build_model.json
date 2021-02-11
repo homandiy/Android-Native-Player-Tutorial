@@ -23,7 +23,10 @@
     "soFolder": "D:\\Android\\tool\\gst-docs-master\\examples\\tutorials\\android\\android-tutorial-4\\build\\intermediates\\ndkBuild\\debug\\lib",
     "isDebuggableEnabled": true,
     "validAbiList": [
-      "X86"
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
     ],
     "buildTargetSet": [
       "tutorial-4"
@@ -122,7 +125,6 @@
         "sdkFolder": "C:\\Users\\Homan\\AppData\\Local\\Android\\Sdk",
         "isNativeCompilerSettingsCacheEnabled": false,
         "isBuildOnlyTargetAbiEnabled": true,
-        "ideBuildTargetAbi": "x86",
         "isCmakeBuildCohabitationEnabled": false,
         "isPrefabEnabled": false,
         "isV2NativeModelEnabled": true

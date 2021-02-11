@@ -4,4 +4,7 @@
     <string name="button_play">Play</string>
     <string name="button_stop">Stop</string>
     <string name="_88_88_88">88:88:88</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="show_message">Show message</string>
 </resources>

@@ -135,7 +135,7 @@ state_changed_cb (GstBus * bus, GstMessage * msg, CustomData * data)
   gst_message_parse_state_changed (msg, &old_state, &new_state, &pending_state);
   /* Only pay attention to messages coming from the pipeline, not its children */
   if (GST_MESSAGE_SRC (msg) == GST_OBJECT (data->pipeline)) {
-    gchar *message = g_strdup_printf ("播放状态： %s",
+    gchar *message = g_strdup_printf ("Status: %s",
         gst_element_state_get_name (new_state));
     set_ui_message (message, data);
     g_free (message);
@@ -184,16 +184,16 @@ app_function (void *userdata)
 
   /* Build pipeline */
   data->pipeline =
-//      gst_parse_launch ("videotestsrc ! warptv ! videoconvert ! autovideosink", &error);
+//      gst_parse_launch ("videotestsrc ! optv ! videoconvert ! autovideosink", &error);
       // boring circles
-//      gst_parse_launch ("videotestsrc pattern=11 ! videoconvert ! autovideosink", &error);
+//      gst_parse_launch ("videotestsrc ! pattern=11 ! videoconvert ! autovideosink", &error);
       // little square
 //      gst_parse_launch ("videotestsrc ! videoconvert ! tee name=t ! queue ! autovideosink t. ! queue ! autovideosink", &error);
       // optical animation
 //      gst_parse_launch ("videotestsrc ! optv ! videoconvert ! autovideosink", &error);
         // sparks and snow
 //      gst_parse_launch ("videotestsrc ! agingtv ! videoconvert ! autovideosink", &error);
-        // boring zeezak
+//         boring zeezak
 //      gst_parse_launch ("videotestsrc ! dicetv ! videoconvert ! autovideosink", &error);
         // boring lines
 //      gst_parse_launch ("videotestsrc ! edgetv ! videoconvert ! autovideosink", &error);
@@ -215,12 +215,12 @@ app_function (void *userdata)
 //                          "text=\"time passed:\" shaded-background=false "
 //                          "font-desc=\"simfang, 30\" ! autovideosink", &error);
         // clock overlay
-        gst_parse_launch ("videotestsrc ! clockoverlay halignment=right "
-                          "valignment=bottom text=\"City\" shaded-background=true "
-                          "font-desc=\"Sans, 36\" ! videoconvert ! autovideosink", &error);
+//        gst_parse_launch ("videotestsrc ! clockoverlay halignment=right "
+//                          "valignment=bottom text=\"City\" shaded-background=true "
+//                          "font-desc=\"Sans, 36\" ! videoconvert ! autovideosink", &error);
         // text overlay
-//        gst_parse_launch ("videotestsrc ! textoverlay text=\"测试\" "
-//                          "font-desc=\"Sans, 72\" ! videoconvert ! autovideosink", &error);
+        gst_parse_launch ("videotestsrc ! textoverlay text=\"Testing\" "
+                          "font-desc=\"Sans, 56\" ! videoconvert ! autovideosink", &error);
 
   if (error) {
     gchar *message =

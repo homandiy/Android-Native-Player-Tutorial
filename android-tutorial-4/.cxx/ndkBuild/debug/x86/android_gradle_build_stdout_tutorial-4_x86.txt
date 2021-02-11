@@ -2,3 +2,5 @@ GStreamer      : [GEN] => gst-build-x86/gstreamer_android.c
 GStreamer      : [COMPILE] => gst-build-x86/gstreamer_android.c
 GStreamer      : [LINK] => gst-build-x86/libgstreamer_android.so
 Done cp
+[x86] Prebuilt       : libgstreamer_android.so <= gst-build-x86/
+[x86] SharedLibrary  : libtutorial-4.so
