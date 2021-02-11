@@ -2,9 +2,10 @@
   <library name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/transforms-2/files-2.1/48423f1f2fa727363b21a26d3f6e5c42/lifecycle-viewmodel-2.1.0/res" />
-      <root url="jar://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/transforms-2/files-2.1/ea6d21af7d78b3a22f2330a0bef1b9a5/lifecycle-viewmodel-2.1.0/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/transforms-2/files-2.1/ea6d21af7d78b3a22f2330a0bef1b9a5/lifecycle-viewmodel-2.1.0/res" />
-      <root url="file://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/transforms-2/files-2.1/ea6d21af7d78b3a22f2330a0bef1b9a5/lifecycle-viewmodel-2.1.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/transforms-2/files-2.1/5fdd8838f5cf60a9f044a8c0360e7c37/lifecycle-viewmodel-2.1.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/transforms-2/files-2.1/5fdd8838f5cf60a9f044a8c0360e7c37/lifecycle-viewmodel-2.1.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/transforms-2/files-2.1/5fdd8838f5cf60a9f044a8c0360e7c37/lifecycle-viewmodel-2.1.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

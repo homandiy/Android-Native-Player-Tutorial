@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.dagger:hilt-android-testing:2.29-alpha@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/transforms-2/files-2.1/ce75df72013827e8907d3d40e36e7fff/jetified-hilt-android-testing-2.29-alpha/res" />
+      <root url="file://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/transforms-2/files-2.1/2d59ec35df6f5c613f3de6e3c017e207/jetified-hilt-android-testing-2.29-alpha/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/transforms-2/files-2.1/2d59ec35df6f5c613f3de6e3c017e207/jetified-hilt-android-testing-2.29-alpha/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/transforms-2/files-2.1/2d59ec35df6f5c613f3de6e3c017e207/jetified-hilt-android-testing-2.29-alpha/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/modules-2/files-2.1/com.google.dagger/hilt-android-testing/2.29-alpha/c69a601b8ef14d6d26044e13321108c186a9937/hilt-android-testing-2.29-alpha-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../gradle/gradle-6.6.1-all/caches/modules-2/files-2.1/com.google.dagger/hilt-android-testing/2.29-alpha/fe340fe18da35c558ff806bf3a1b4f643cc59811/hilt-android-testing-2.29-alpha-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
