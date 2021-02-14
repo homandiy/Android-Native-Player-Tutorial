@@ -1,0 +1,9 @@
+[x86_64] Compile        : tutorial-4 <= tutorial-4.c
+[x86_64] Compile++      : tutorial-4 <= dummy.cpp
+GStreamer      : [GEN] => gst-build-x86_64/gstreamer_android.c
+GStreamer      : [COMPILE] => gst-build-x86_64/gstreamer_android.c
+GStreamer      : [LINK] => gst-build-x86_64/libgstreamer_android.so
+Done cp
+[x86_64] Prebuilt       : libgstreamer_android.so <= gst-build-x86_64/
+[x86_64] Prebuilt       : libc++_shared.so <= <NDK>/sources/cxx-stl/llvm-libc++/libs/x86_64/
+[x86_64] SharedLibrary  : libtutorial-4.so

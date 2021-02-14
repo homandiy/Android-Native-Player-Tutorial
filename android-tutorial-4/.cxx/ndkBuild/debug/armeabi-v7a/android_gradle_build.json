@@ -63,7 +63,7 @@
       "artifactName": "gstreamer_android",
       "output": "gst-build-armeabi-v7a\\libgstreamer_android.so"
     },
-    "tutorial-4-debug-armeabi-v7a": {
+    "player-debug-armeabi-v7a": {
       "buildCommandComponents": [
         "C:\\Users\\Homan\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\ndk-build.cmd",
         "NDK_PROJECT_PATH\u003dnull",
@@ -79,12 +79,12 @@
         "GSTREAMER_JAVA_SRC_DIR\u003dsrc",
         "GSTREAMER_ROOT_ANDROID\u003dD:\\Android\\gstreamer\\1.18.3",
         "GSTREAMER_ASSETS_DIR\u003dsrc/assets",
-        "D:/Android/tool/gst-docs-master/examples/tutorials/android/android-tutorial-4/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libtutorial-4.so"
+        "D:/Android/tool/gst-docs-master/examples/tutorials/android/android-tutorial-4/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libplayer.so"
       ],
       "toolchain": "toolchain-armeabi-v7a",
       "abi": "armeabi-v7a",
-      "artifactName": "tutorial-4",
-      "output": "D:\\Android\\tool\\gst-docs-master\\examples\\tutorials\\android\\android-tutorial-4\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\armeabi-v7a\\libtutorial-4.so"
+      "artifactName": "player",
+      "output": "D:\\Android\\tool\\gst-docs-master\\examples\\tutorials\\android\\android-tutorial-4\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\armeabi-v7a\\libplayer.so"
     }
   },
   "toolchains": {

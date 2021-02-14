@@ -68,14 +68,19 @@
     <output-test url="file://$MODULE_DIR$/../../../android-tutorial-4/build/intermediates/javac/debugUnitTest/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/gstreamer-1.0" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/orc-0.4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/glib-2.0" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/gstreamer-1.0" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/orc-0.4" />
     </content>
     <content url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/glib-2.0">
-      <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/glib-2.0" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/glib-2.0" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/lib/glib-2.0/include">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/lib/glib-2.0/include" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/lib/glib-2.0/include" />
     </content>
     <content url="file://$MODULE_DIR$/../../../android-tutorial-4">
@@ -93,6 +98,9 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/build/generated/source/kaptKotlin/debug" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/build/generated/source/kaptKotlin/debugAndroidTest" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/build/generated/source/kaptKotlin/debugUnitTest" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/build/generated/source/kapt/debugUnitTest" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/gst-build-x86" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/gst-build-x86" />
       <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/jni" />
       <excludeFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/.cxx" />
