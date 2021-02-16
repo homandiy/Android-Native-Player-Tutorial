@@ -71,6 +71,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/gstreamer-1.0" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/orc-0.4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/glib-2.0" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/glib-2.0" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../../../../../gstreamer/1.18.3/x86/include/gstreamer-1.0" />
