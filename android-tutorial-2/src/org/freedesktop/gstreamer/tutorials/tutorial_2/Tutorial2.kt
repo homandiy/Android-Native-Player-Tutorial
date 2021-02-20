@@ -8,8 +8,8 @@ import android.widget.ImageButton
 import android.widget.TextView
 import org.freedesktop.gstreamer.GStreamer
 
-import org.freedesktop.gstreamer.tutorials.tutorial_2.common.lgd
-import org.freedesktop.gstreamer.tutorials.tutorial_2.common.lgi
+import com.homan.huang.common.helper.lgd
+import com.homan.huang.common.helper.lgi
 
 
 import java.lang.Exception

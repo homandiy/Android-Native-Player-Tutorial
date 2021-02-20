@@ -46,6 +46,9 @@ typedef struct _CustomData
   gint64 desired_position;      /* Position to seek to, once the pipeline is running */
   GstClockTime last_seek_time;  /* For seeking overflow prevention (throttling) */
   gboolean is_live;             /* Live streams do not use buffering */
+
+  // Homan's vars:
+  gboolean full_screen;         /* check full screen mode */
 } CustomData;
 
 /* playbin flags */
@@ -271,10 +274,10 @@ buffering_cb (GstBus * bus, GstMessage * msg, CustomData * data)
 
   gst_message_parse_buffering (msg, &percent);
   if (percent < 100 && data->target_state >= GST_STATE_PAUSED) {
-    gchar *message_string = g_strdup_printf ("Buffering %d%%", percent);
-    gst_element_set_state (data->pipeline, GST_STATE_PAUSED);
-    set_ui_message (message_string, data);
-    g_free (message_string);
+//    gchar *message_string = g_strdup_printf ("Buffering %d%%", percent);
+//    gst_element_set_state (data->pipeline, GST_STATE_PAUSED);
+//    set_ui_message (message_string, data);
+//    g_free (message_string);
   } else if (data->target_state >= GST_STATE_PLAYING) {
     gst_element_set_state (data->pipeline, GST_STATE_PLAYING);
   } else if (data->target_state >= GST_STATE_PAUSED) {
@@ -395,6 +398,8 @@ app_function (void *userdata)
 
   /* Build pipeline */
   data->pipeline = gst_parse_launch ("playbin", &error);
+
+
   if (error) {
     gchar *message =
         g_strdup_printf ("Unable to build pipeline: %s", error->message);
@@ -432,6 +437,13 @@ app_function (void *userdata)
   g_signal_connect (G_OBJECT (bus), "message::clock-lost",
       (GCallback) clock_lost_cb, data);
   gst_object_unref (bus);
+
+  if (data->full_screen) {
+    GstElement *videoFlip = gst_element_factory_make("videoflip", NULL);
+    // clockwise (1) – Rotate clockwise 90 degrees
+    g_object_set(videoFlip, "method", 1, NULL);
+    g_object_set(data->pipeline, "video-filter", videoFlip, NULL);
+  }
 
   /* Register a function that GLib will call 4 times per second */
   timeout_source = g_timeout_source_new (250);
@@ -510,6 +522,7 @@ gst_native_set_uri (JNIEnv * env, jobject thiz, jstring uri)
   if (data->target_state >= GST_STATE_READY)
     gst_element_set_state (data->pipeline, GST_STATE_READY);
   g_object_set (data->pipeline, "uri", char_uri, NULL);
+
   (*env)->ReleaseStringUTFChars (env, uri, char_uri);
   data->duration = GST_CLOCK_TIME_NONE;
   data->is_live =
@@ -539,10 +552,14 @@ gst_native_pause (JNIEnv * env, jobject thiz)
   if (!data)
     return;
   GST_DEBUG ("Setting state to PAUSED");
+
   data->target_state = GST_STATE_PAUSED;
+  GST_DEBUG ("Set target_state: %d", data->target_state);
+
   data->is_live =
       (gst_element_set_state (data->pipeline,
           GST_STATE_PAUSED) == GST_STATE_CHANGE_NO_PREROLL);
+  GST_DEBUG ("Set is_live: %d", data->is_live);
 }
 
 /* Instruct the pipeline to seek to a different position */
@@ -560,6 +577,18 @@ gst_native_set_position (JNIEnv * env, jobject thiz, int milliseconds)
         GST_TIME_ARGS (desired_position));
     data->desired_position = desired_position;
   }
+}
+
+/* Instruct the pipeline to use full screen mode */
+void
+gst_native_set_screen_mode (JNIEnv * env, jobject thiz, jboolean fullScreen)
+{
+  CustomData *data = GET_CUSTOM_DATA (env, thiz, custom_data_field_id);
+  if (!data)
+    return;
+
+  data->full_screen = (gboolean) fullScreen;
+  GST_DEBUG ("Full screen? %d", data->full_screen);
 }
 
 /* Static class initializer: retrieve method and field IDs */
@@ -597,7 +626,7 @@ gst_native_surface_init (JNIEnv * env, jobject thiz, jobject surface)
   if (!data)
     return;
   ANativeWindow *new_native_window = ANativeWindow_fromSurface (env, surface);
-  GST_DEBUG ("Received surface %p (native window %p)", surface,
+  GST_DEBUG ("\n.\n.\nReceived surface %p (native window %p)", surface,
       new_native_window);
 
   if (data->native_window) {
@@ -616,6 +645,11 @@ gst_native_surface_init (JNIEnv * env, jobject thiz, jobject surface)
     }
   }
   data->native_window = new_native_window;
+
+  // check window size
+  int32_t width = ANativeWindow_getWidth(data->native_window);
+  int32_t height = ANativeWindow_getHeight(data->native_window);
+  GST_DEBUG ("Received surface -- Native Windows: w: %d x h: %d\n.\n.\n", width, height);
 
   check_initialization_complete (data);
 }
@@ -646,7 +680,12 @@ static JNINativeMethod native_methods[] = {
   {"nativeSetUri", "(Ljava/lang/String;)V", (void *) gst_native_set_uri},
   {"nativePlay", "()V", (void *) gst_native_play},
   {"nativePause", "()V", (void *) gst_native_pause},
+
+  // I for jint
   {"nativeSetPosition", "(I)V", (void *) gst_native_set_position},
+  // Z for jboolean
+  {"nativeSetScreenMode", "(Z)V", (void *) gst_native_set_screen_mode},
+
   {"nativeSurfaceInit", "(Ljava/lang/Object;)V",
       (void *) gst_native_surface_init},
   {"nativeSurfaceFinalize", "()V", (void *) gst_native_surface_finalize},

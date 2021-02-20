@@ -1,4 +1,4 @@
-package org.freedesktop.gstreamer.tutorials.tutorial_2.common
+package com.homan.huang.common.helper
 
 import android.util.Log
 
