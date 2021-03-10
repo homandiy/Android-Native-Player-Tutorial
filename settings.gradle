@@ -2,7 +2,7 @@
 //include ':android-tutorial-2'
 //include ':android-tutorial-3'
 include ':android-tutorial-4'
-//include ':android-tutorial-5'
+include ':android-tutorial-5'
 
 
 //def gstreamersdk='D:\\Android\\gstreamer\\1.18.3'
